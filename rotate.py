@@ -49,12 +49,12 @@ class RotateAngle(Node):
 
         # ROS interfaces
         self.cmd_pub = self.create_publisher(
-            Twist, '/tb_std/cmd_vel_unstamped', 10
+            Twist, '/tb_lite/cmd_vel_unstamped', 10
         )
 
         self.odom_sub = self.create_subscription(
             Odometry,
-            '/tb_std/odom',
+            '/tb_lite/odom',
             self.odom_callback,
             10
         )
